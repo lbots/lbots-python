@@ -41,10 +41,11 @@ class LBotsClient:
 
     @ratelimit(20, 5)
     def update_stats(self, guild_count: int, shard_count: int = 1, shard_id: int = 0) -> bool:
+        data = ({"guild_count": guild_count, "shard_count": shard_count, "shard_id": shard_id}
+                if shard_count > 1
+                else {"guild_count": guild_count})
         response = self._request(self.base + "/stats",
-                                 {"guild_count": guild_count,
-                                  "shard_count": shard_count,
-                                  "shard_id": shard_id},
+                                 data,
                                  method="POST")
         return response["success"]
 

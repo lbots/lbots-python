@@ -1,0 +1,26 @@
+language: python
+
+dist: xenial
+
+python:
+  - "3.5"
+  - "3.6"
+  - "3.7"
+
+before_install:
+  - sudo apt update
+  - sudo apt install libfftw3-dev libav-tools ffmpeg
+
+install:
+  - pip install -U -r requirements-ci.txt -r requirements.txt
+
+script:
+  - snekchek
+  - python setup.py install
+  - pytest -c .snekrc tests/*
+
+cache:
+  - pip
+
+notifications:
+  email: false

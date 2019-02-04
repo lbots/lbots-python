@@ -7,6 +7,8 @@ description = "Official python wrapper for the lbots.org API"
 with open("README.md") as f:
     long_description = f.read()
 
+with open("requirements.txt") as f:
+    requirements = f.readlines()
 
 if __name__ == '__main__':
     setup(
@@ -22,7 +24,7 @@ if __name__ == '__main__':
         long_description=long_description,
         url="https://github.com/IzunaDevs/IzunaDSP",
         packages=find_packages(),
-        install_requires=["requests", "aiohttp", "ratelimit"],
+        install_requires=requirements,
         keywords=["lbots", "client", "api", "wrapper", "asyncio"],
         classifiers=[
             "Development Status :: 4 - Beta",

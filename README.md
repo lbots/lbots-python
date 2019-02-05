@@ -28,7 +28,7 @@ my_shard_id = 1
 my_client.update_stats(my_guild_count, my_shard_count, my_shard_id)
 
 # Get the amount of favorites your bot has
-my_client.favorite_count()
+favorite_amount = my_client.favorite_count()
 
 # Check if a user favorited your bot
 target_user_id = 123123123

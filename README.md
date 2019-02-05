@@ -1,7 +1,7 @@
 # LBots Python Wrapper
 
 The official wrapper for the [LBots.org API](https://lbots.org/api/docs)
-<br>*Licensed Under BDD-3-Clause*
+<br>*Licensed Under BSD-3-Clause*
 
 ## Usage
 

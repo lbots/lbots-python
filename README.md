@@ -1,10 +1,13 @@
 # LBots Python Wrapper
 
 The official wrapper for the [LBots.org API](https://lbots.org/api/docs)
+*Licensed Under BDD-3-Clause*
 
 ## Usage
 
 ```python
+# BSD-3-Clause
+# https://lbots.org
 from lbots import LBotsClient
 
 MY_BOT_ID = 1234567
